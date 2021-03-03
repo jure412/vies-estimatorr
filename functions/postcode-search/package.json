@@ -1,0 +1,9 @@
+{
+  "name": "postcode-search",
+  "version": "1.0.0",
+  "main": "postcode-search.js",
+  "dependencies": {
+    "node-fetch": "^2.3.0",
+    "querystring": "^0.2.0"
+  }
+}

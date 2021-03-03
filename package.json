@@ -1,0 +1,93 @@
+{
+  "name": "europort",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/form-serialize": "^0.7.1",
+    "autosize-input": "^1.0.2",
+    "date-fns": "^2.9.0",
+    "focus-visible": "^5.0.2",
+    "form-serialize": "^0.7.2",
+    "framer-motion": "^1.7.0",
+    "gotrue-js": "^0.9.25",
+    "http-proxy-middleware": "^0.20.0",
+    "netlify-lambda": "^1.6.3",
+    "numeral": "^2.0.6",
+    "polished": "^3.4.2",
+    "qs": "^6.9.1",
+    "react": "^16.12.0",
+    "react-click-outside": "tj/react-click-outside",
+    "react-datepicker": "^2.11.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "react-sticky": "^6.0.3",
+    "styled-components": "^4.4.1",
+    "swr": "^0.1.16",
+    "typescript": "~3.7.2",
+    "uniqid": "^5.2.0",
+    "urlencode": "^1.1.0",
+    "use-debounce": "^3.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-app-rewired build",
+    "deploy": "yarn build && netlify deploy",
+    "deploy:prod": "yarn deploy --prod",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "postinstall": "netlify-lambda install",
+    "start:lambda": "netlify-lambda serve functions"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/form-serialize": "^0.7.1",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/numeral": "^0.0.26",
+    "@types/qs": "^6.9.0",
+    "@types/react": "^16.9.0",
+    "@types/react-click-outside": "^3.0.3",
+    "@types/react-datepicker": "^2.10.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/react-sticky": "^6.0.3",
+    "@types/styled-components": "^4.4.1",
+    "@types/uniqid": "^4.1.3",
+    "@types/urlencode": "^1.1.1",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "netlify-cli": "^2.32.0",
+    "prettier": "^1.19.1",
+    "react-app-rewire-styled-components": "^3.0.2",
+    "react-app-rewired": "^2.1.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
