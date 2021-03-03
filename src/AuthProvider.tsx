@@ -3,7 +3,7 @@ import GoTrue, { User } from 'gotrue-js';
 
 const auth = new GoTrue({
   // APIUrl: "https://boring-mcnulty-25f906.netlify.app"
-  APIUrl: process.env.REACT_APP_IDENTITY_API_URL
+  APIUrl: "https://vies-estimator.netlify.app/"
 });
 
 
