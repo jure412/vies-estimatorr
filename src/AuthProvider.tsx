@@ -2,8 +2,8 @@ import React, { useState, useContext, useMemo, useCallback } from 'react';
 import GoTrue, { User } from 'gotrue-js';
 
 const auth = new GoTrue({
-  APIUrl: "https://boring-mcnulty-25f906.netlify.app"
-  //  process.env.REACT_APP_IDENTITY_API_URL,
+  // APIUrl: "https://boring-mcnulty-25f906.netlify.app"
+  APIUrl: process.env.REACT_APP_IDENTITY_API_URL
 });
 
 
@@ -23,6 +23,7 @@ type Props = {
 
 const AuthProvider = ({ children }: Props) => {
   const [user, setUser] = useState<User | null>(auth.currentUser());
+  console.log(user)
 
   const login = useCallback(
     async (email: string, password: string, remember: boolean) => {
