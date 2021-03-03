@@ -2,10 +2,10 @@ import React, { useState, useContext, useMemo, useCallback } from 'react';
 import GoTrue, { User } from 'gotrue-js';
 
 const auth = new GoTrue({
-  APIUrl: process.env.REACT_APP_IDENTITY_API_URL,
+  APIUrl: "https://boring-mcnulty-25f906.netlify.app"
+  //  process.env.REACT_APP_IDENTITY_API_URL,
 });
 
-console.log(process.env)
 
 type AuthContextType = {
   isAuthenticated: boolean;
